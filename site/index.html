@@ -3,30 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoos Reading!</title>
-    <link rel="stylesheet" href="site.css"> <!-- Link to your CSS file -->
+    <title>Homepage</title>
+    <link rel="stylesheet" href="site.css">
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html" class="tab">Home</a>
-        <a href="about.html" class="tab">About Us</a>
-        <a href="quiz.html" class="tab">Quiz</a>
+        <a href="#home" class="tab">Home</a>
+        <a href="#about" class="tab">About Us</a>
+        <a href="#quiz" class="tab">Take Quiz</a>
     </nav>
 
-    <div class="background-container">
-        <div class="heading-background">
-            <h1>Hoo's reading???</h1>
+    <div class="header-container">
+        <h1>Hoo's Reading?</h1>
+        <p>Elevate Your Understanding: The Chrome extension that tailors your reading to your pace. Find your reading level with a quick test and transform any text into material you can comprehend with ease. It's your reading journey, personalized.</p>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about" class="about-section">
+        <div class="about-content">
+            <h2>Inclusive Reading, Tailored for You</h2>
+            <p>Welcome to our community at Hoos Reading, where accessibility meets personalization. As co-founders, we believe that everyone deserves the opportunity to explore the world of reading at their own pace. Our journey began with a simple quiz to determine your reading level and has since evolved into an intuitive Chrome extension. This tool not only assesses your proficiency but also adapts any text to match your comfort level, making reading a breeze. It's not just about understanding better—it's about connecting more deeply with every word. With Hoo’s Reading, we're committed to building a space where every member of our diverse community can grow, learn, and enjoy the pleasure of reading.</p>
         </div>
-        <div class="heading-background">
-            <h2>Discover easier reading with one simple quiz</h2>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz" class="quiz-section">
+        <div class="quiz-content">
+            <h2>TAKE OUR TEST</h2>
+            <p>Take our online quiz to find which level of comprehension works best for you</p>
+            <button onclick="location.href='quiz.html'">Take the Quiz</button>
+
         </div>
     </div>
     
-    <!-- Other sections of your website -->
-    <!-- Quiz questions will be dynamically inserted here -->
-<div id="quiz-questions" class="quiz-questions"></div>
+    
+    <div class="footer-container">
+        <p>Hoo's Reading?</p>
+        <img src="logo.png" alt="Logo" class="footer-logo"> <!-- Replace with your image path -->
+    </div>
 
-<!-- Link to your quiz.js file -->
-<script src="quiz.js"></script>
 </body>
 </html>
