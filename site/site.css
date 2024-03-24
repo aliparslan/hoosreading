@@ -1,0 +1,180 @@
+.header-container {
+    background-image: url('background.jpeg'); /* Adjust the path to your image */
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding: 400px 0; /* Adjust top and bottom padding as needed */
+    min-height: 600px; /* Adjust height as needed */
+    margin: 20px auto; /* Top and bottom margins can be adjusted, auto for left and right centers the element */
+    max-width: 1000px; /* Adjust according to your content width */
+    line-height: 1.6;
+}
+
+
+body {
+    font-family: 'Times New Roman', serif;
+    background-image: url('background.jpeg');
+    font-size: 1.5em;
+    color: rgb(20, 20, 20);
+    margin: 10;
+    padding: 0;
+    /* To make the website longer, ensure the sections below have enough total height */
+}
+
+/* Style the navigation bar */
+.navbar {
+    background-color: #eabd8f; /* Adjusted the color to match your provided images */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+/* Style the navigation tabs and add hover effect */
+.tab {
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #8b471a; /* Darker green shade for hover effect */
+}
+
+/* Style the header container */
+/* .header-container {
+    text-align: center;
+    padding: 100px 0;
+} */
+
+/* Style the main headline */
+h1 {
+    font-size: 3.5em; /* Increase font-size as needed */
+    margin-top: 0; /* Adjust top margin to move it up */
+    text-align: center; /* Ensure it is centered */
+}
+
+
+/* Style the subtext */
+.header-container {
+    background-image: url('path-to-your-books-background-image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 1000px;
+    text-align: center;
+    padding-top: 300px; /* Adjust as needed to push the content down */
+    min-height: 600px; /* Increase height to make the section taller */
+    margin-top: 20px;
+}
+
+/* Style the email input */
+.email-input {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Style the 'Get Started' button */
+.get-started-btn {
+    padding: 10px 20px;
+    background-color: #f4be8b; /* A light orange color for the button */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the About Us and Quiz sections */
+.about-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-top: -100px; /* Pushes the section up over the header image, reduce value to lower the section */
+    min-height: 200px; /* Smaller height for the section */
+    /* Other styles... */
+}
+
+.about-content {
+    width: 100%;
+    max-width: 800px; /* Increased max-width to make the text box wider */
+    background: rgba(198, 228, 245, 0.9); /* Adjusted the opacity value to be within 0-1 */
+    padding: 40px;
+    border-radius: 8px; /* Optional: if you want rounded corners */
+    margin-right: auto; /* Center align the box, if desired */
+    margin-left: auto; /* Center align the box, if desired */
+    margin-top: 100px;
+}
+
+.quiz-section {
+    background-color: #ffecc7; /* Light background color */
+    padding: 50px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around; /* This will space out any children elements inside the .quiz-section */
+    align-items: center; /* This vertically centers the children elements */
+    min-height: 600px; /* This will be the height of your quiz section */
+}
+
+.quiz-content {
+    width: 100%;
+    max-width: 400px; /* Adjust this to control the width of your text box */
+    background: rgba(198, 228, 245, 0.9); /* Your blue semi-transparent background */
+    padding: 40px;
+    border-radius: 8px;
+    text-align: left; /* Aligns text to the left inside the .quiz-content */
+    margin-right: 50px; /* Adjust as needed */
+    margin-top: 100px; /* Adjust as needed */
+}
+
+/* Add Get Started button styling within sections */
+.about-section button,
+.quiz-content button {
+    background-color: black; /* Black background for the button */
+    color: white; /* White text color for the button */
+    border: none; /* No border for the button */
+    padding: 15px 30px; /* Spacing inside the button */
+    margin-top: 20px; /* Space above the button */
+    cursor: pointer; /* Changes cursor to pointer when hovered over the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    text-transform: uppercase; /* Makes the button text uppercase */
+    font-weight: bold; /* Makes the button text bold */
+    font-size: 1em; /* Size of the button text */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+.quiz-content button:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+h2 {
+    font-size: 2.5em; /* Large font size for the headline */
+    margin-top: 0;
+}
+
+
+/* Style the footer */
+.footer-container {
+    background-color: #eabd8f; /* A darker shade of green for the footer */
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* No longer absolute to be part of the document flow */
+    bottom: 0;
+    width: 100%;
+    min-height: 150px; /* Adjust as needed */
+
+}
+
+.footer-logo {
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    bottom: 20px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
+}

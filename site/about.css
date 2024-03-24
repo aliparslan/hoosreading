@@ -1,0 +1,20 @@
+/* Set background color */
+.background-container {
+    background-color: #D95030; /* Orange color */
+    text-align: center;
+    padding: 100px 0; /* Add padding as needed */
+}
+
+/* Center the content */
+.content {
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Style the logo */
+.logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add margin as needed */
+}
