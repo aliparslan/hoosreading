@@ -39,6 +39,7 @@ var comprehensionData = [
                 answer: "other children looked at her"
             } 
         ]
+    },
         // Level 2 comprehension object
     {
         level: "2",
@@ -51,13 +52,14 @@ var comprehensionData = [
                 options: ["find a lost treasure", "study nature", "get some exercise"],
                 answer: "study nature"
             }
+       ]
     }
-]
+];
 // Function to get the level from the URL parameter
 function getLevelFromURL() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    return urlParams.get('level') || '1';  // Default to level 1 if no parameter is found
+    return urlParams.get('level') || '1'; // Default to level 1 if no parameter is found
 }
 
 // Function to display the comprehension for a given level
@@ -189,14 +191,6 @@ function submitQuiz() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const level = getLevelFromURL();
-    displayComprehensionForLevel(level);
-});
-
-
-
-// Ensure this function is called when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    const level = getLevelFromURL();
-    displayComprehensionForLevel(level);
+    const level = getLevelFromURL(); // Get the level from the URL
+    displayComprehensionForLevel(level); // Display the correct quiz based on the level
 });
