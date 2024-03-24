@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoos Reading!</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <title>HoosReading - Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="background-container">
-        <div class="heading-background">
-            <h1>Hoo's Reading</h1>
+    <nav class="navbar">
+        <a href="index.html" class="tab">Home</a>
+        <a href="about.html" class="tab">About Us</a>
+        <a href="quiz.html" class="tab">Quiz</a>
+    </nav>
+    
+
+    <div id="quiz-container">
+        <div id="comprehension-paragraph" class="comprehension-paragraph">
+            <!-- The comprehension paragraph will be loaded here by quiz.js -->
         </div>
-        <div class="heading-background">
-            <h2>Discover easier reading with one simple quiz</h2>
+
+        <div id="quiz-questions" class="quiz-questions">
+            <!-- The quiz questions will be loaded here by quiz.js -->
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
 </body>
 </html>

@@ -1,25 +1,53 @@
-/* Set background image */
-.background-container {
-    background-image: url('background.webp'); /* Path to your background image */
-    background-size: cover;
+/* Apply a background image to the whole page */
+html {
+    height: 100%;
+    background-image: url('background.webp'); /* Ensure the path to your image is correct */
     background-position: center;
-    text-align: center;
-    padding: 400px 0; /* Add padding as needed */
-}
-
-/* Center the headings */
-h1, h2 {
-    position: relative;
-    text-align: center;
-    color: white;
-    font-size: 60px;
-    z-index: 1;
-}
-
-/* Style the button */
-.button {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  body {
+    margin: 0;
+    /* Use display flex to center the child vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem; /* Add some padding around the content */
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* Rest of your navbar styling */
+  }
+  
+  /* Container for quiz content */
+  #quiz-container {
+    width: auto; /* Takes the width of the content */
+    max-width: 800px; /* Adjust as needed */
+    margin: auto; /* Centers the container */
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    text-align: left; /* Aligns text to the left inside the container */
+  }
+  
+  /* Center the headings */
+  h1, h2 {
+    color: black;
+    font-size: 2.5rem; /* Adjusted for better scalability */
+    margin: 0 0 1rem 0; /* Top and bottom margins */
+  }
+  
+  /* Style the button */
+  .button {
     display: inline-block;
-    padding: 50px 100px;
+    padding: 10px 20px; /* Adjusted padding for a more standard button size */
     background-color: #D95030; /* Orange color */
     color: white;
     text-decoration: none;
@@ -27,4 +55,10 @@ h1, h2 {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
-}
+  }
+  
+  /* Styles for quiz content */
+  .comprehension-paragraph, .quiz-questions {
+    margin-bottom: 20px; /* Space between paragraphs/questions */
+  }
+  
