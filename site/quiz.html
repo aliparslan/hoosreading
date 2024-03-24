@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoos Reading!</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <title>Quiz - Find Your Reading Level</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="background-container">
-        <div class="heading-background">
-            <h1>Hoo's Reading</h1>
+    <nav class="navbar">
+        <a href="index.html" class="tab">Home</a>
+        <a href="#about" class="tab">About Us</a>
+        <a href="quiz.html" class="tab">Take Quiz</a>
+    </nav>
+
+    <div class="quiz-header">
+        <h1>Follow the test below to find your reading level</h1>
+        <p>Start with level 1 and continue until you receive less than 80% on a comprehension check, the high level you pass is our suggested level you use to help you when reading!</p>
+    </div>
+
+    <div class="level-container">
+        <!-- Repeat for levels 1-5 -->
+        <div class="level" style="background-color: rgba(198, 228, 245, 0.9);"> <!-- Corrected RGBA value -->
+            <h2>Level 1</h2>
+            <a href="link-to-level-1" class="level-link">Take Level 1 Test</a>
         </div>
-        <div class="heading-background">
-            <h2>Discover easier reading with one simple quiz</h2>
+        <div class="level" style="background-color: rgba(198, 228, 245, 0.9);"> <!-- Corrected RGBA value -->
+            <h2>Level 2</h2>
+            <a href="link-to-level-2" class="level-link">Take Level 2 Test</a>
+        </div>
+        <div class="level" style="background-color: rgba(198, 228, 245, 0.9);"> <!-- Corrected RGBA value -->
+            <h2>Level 3</h2>
+            <a href="link-to-level-3" class="level-link">Take Level 3 Test</a>
+        </div>
+        <div class="level" style="background-color: rgba(198, 228, 245, 0.9);"> <!-- Corrected RGBA value -->
+            <h2>Level 4</h2>
+            <a href="link-to-level-4" class="level-link">Take Level 4 Test</a>
+        </div><div class="level" style="background-color: rgba(198, 228, 245, 0.9);"> <!-- Corrected RGBA value -->
+            <h2>Level 5</h2>
+            <a href="link-to-level-5" class="level-link">Take Level 5 Test</a>
+        </div>
+        <!-- ... other levels ... -->
+        <div class="level" style="background-color: rgba(198, 228, 245, 0.9);"> <!-- Corrected style attribute with quotes -->
+            <h2>Non-Technical</h2>
+            <a href="link-to-non-technical" class="level-link">Take Non-Technical Test</a>
+        </div>
+    </div>
+    
+    <!-- Include your footer here -->
+    <div class="footer-container">
+        <p>Hoo's Reading?</p>
+        <img src="logo.png" alt="Logo" class="footer-logo"> <!-- Replace with your image path -->
+    </div>
+
 </body>
 </html>
