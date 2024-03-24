@@ -1,15 +1,11 @@
-require('dotenv').config();
-const apiKey = process.env.OPENAI_API_KEY;
-console.log(apiKey);
-
 // mapping user's choice to their level of reading
 const mappings = {
-    "A1": "lower elementary school student",
-    "A2": "upper elementary school student",
-    "B1": "middle school student",
-    "B1+": "high school student",
-    "B2": "college student",
-    "Non-Technical": "layperson"
+    "Lower elementary": "lower elementary school student",
+    "Upper elementary": "upper elementary school student",
+    "Middle school": "middle school student",
+    "High school": "high school student",
+    "College": "college student",
+    "General audience": "layperson or general audience"
 }
 
 // global variable to keep track of user's query
@@ -32,6 +28,7 @@ async function callOpenAI(content) {
     // console.log("mapping: " + mappings[query]);
     // console.log("Original content being processed: " + content);
 
+    const apiKey = 'your_api_key';
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
         headers: {
@@ -43,7 +40,7 @@ async function callOpenAI(content) {
             messages: [
                 {
                     "role": "system",
-                    "content": `You are an assistant that listens to directions carefully. Take the following text and modify it so it is suitable for the reading comprehension of a ${mappings[query]}, but contains the same content and is about the same length. Only return the text, don't speak anything else. Ignore names, dates, metadata, and non-semantic texts.`
+                    "content": `You are an assistant that listens to directions carefully. Take the following text and modify it so it is suitable for the reading comprehension of a ${mappings[query]}, but contains the same content and is about the same length. Only return the text and don't add extra comments or speech. Ignore names, dates, metadata, and non-semantic texts.`
                 },
                 {
                     "role": "user",
@@ -54,7 +51,7 @@ async function callOpenAI(content) {
     });
 
     const data = await response.json();
-    return data.choices[0].message.content; // Return the modified text
+    return ' ' + data.choices[0].message.content + ' '; // Return the modified text
 }
 
 // Function to modify text nodes
