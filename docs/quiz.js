@@ -153,10 +153,7 @@ function submitQuiz() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const level = getLevelFromURL();
-    displayComprehensionForLevel(level);
-});
+
 function submitQuiz() {
     var correctAnswersCount = 0;
     var level = getLevelFromURL();
