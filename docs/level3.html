@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Comprehension Quiz - HoosReading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="tab">Home</a>
+        <a href="about.html" class="tab">About Us</a>
+        <a href="quiz.html" class="tab">Quiz</a>
+    </nav>
+
+    <div id="quiz-container">
+        <h2>Level 3: Middle School</h2>
+        <h3>The Lost City</h3>
+        <p>Deep in the heart of the jungle, there lies a lost city that has fascinated explorers for centuries. Legend has it that the city is filled with untold treasures and ancient artifacts, but few have ever returned to tell the tale.</p>
+        <p>One summer, a group of archaeologists set out to uncover the secrets of the lost city. Led by Dr. Emily Carter, the team braved the dangers of the jungle, facing wild animals and treacherous terrain along the way.</p>
+        <p>After weeks of searching, they stumbled upon the ruins of an ancient temple hidden deep within the jungle. Inside, they found hieroglyphics that hinted at the location of the city's legendary treasure.</p>
+        <p>With renewed determination, the team pressed on, following the clues until they reached a hidden chamber at the heart of the city. There, they uncovered a vast treasure trove filled with gold artifacts and precious jewels, confirming the truth of the legend.</p>
+
+        <!-- Questions -->
+        <form id="quiz-form">
+            <!-- Question 1 -->
+            <div class="question">
+                <h4>Question 1: Who led the expedition to the lost city?</h4>
+                <label><input type="radio" name="q1" value="Dr. Emily Carter"> Dr. Emily Carter</label><br>
+                <label><input type="radio" name="q1" value="Dr. David Johnson"> Dr. David Johnson</label><br>
+                <label><input type="radio" name="q1" value="Dr. Sarah Wilson"> Dr. Sarah Wilson</label><br>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="question">
+                <h4>Question 2: What was the team searching for?</h4>
+                <label><input type="radio" name="q2" value="a lost city"> a lost city</label><br>
+                <label><input type="radio" name="q2" value="a buried treasure"> a buried treasure</label><br>
+                <label><input type="radio" name="q2" value="ancient artifacts"> ancient artifacts</label><br>
+            </div>
+            
+            <!-- Question 3 -->
+            <div class="question">
+                <h4>Question 3: What dangers did the team face?</h4>
+                <label><input type="radio" name="q3" value="wild animals"> wild animals</label><br>
+                <label><input type="radio" name="q3" value="treacherous terrain"> treacherous terrain</label><br>
+                <label><input type="radio" name="q3" value="both wild animals and treacherous terrain"> both wild animals and treacherous terrain</label><br>
+            </div>
+            
+            <!-- Question 4 -->
+            <div class="question">
+                <h4>Question 4: What did they find inside the ancient temple?</h4>
+                <label><input type="radio" name="q4" value="hieroglyphics"> hieroglyphics</label><br>
+                <label><input type="radio" name="q4" value="a hidden chamber"> a hidden chamber</label><br>
+                <label><input type="radio" name="q4" value="ancient artifacts"> ancient artifacts</label><br>
+            </div>
+            
+            <!-- Question 5 -->
+            <div class="question">
+                <h4>Question 5: What did the hieroglyphics hint at?</h4>
+                <label><input type="radio" name="q5" value="the location of the treasure"> the location of the treasure</label><br>
+                <label><input type="radio" name="q5" value="the history of the city"> the history of the city</label><br>
+                <label><input type="radio" name="q5" value="the dangers ahead"> the dangers ahead</label><br>
+            </div>
+            
+            <!-- Question 6 -->
+            <div class="question">
+                <h4>Question 6: Where did they find the hidden chamber?</h4>
+                <label><input type="radio" name="q6" value="at the entrance of the temple"> at the entrance of the temple</label><br>
+                <label><input type="radio" name="q6" value="at the heart of the city"> at the heart of the city</label><br>
+                <label><input type="radio" name="q6" value="deep within the jungle"> deep within the jungle</label><br>
+            </div>
+            
+            <!-- Question 7 -->
+            <div class="question">
+                <h4>Question 7: What did they uncover in the hidden chamber?</h4>
+                <label><input type="radio" name="q7" value="a vast treasure trove"> a vast treasure trove</label><br>
+                <label><input type="radio" name="q7" value="a hidden passage"> a hidden passage</label><br>
+                <label><input type="radio" name="q7" value="a secret weapon"> a secret weapon</label><br>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <h4>Question 8: How did they feel when they found the treasure?</h4>
+                <label><input type="radio" name="q8" value="disappointed"> disappointed</label><br>
+                <label><input type="radio" name="q8" value="relieved"> relieved</label><br>
+                <label><input type="radio" name="q8" value="excited"> excited</label><br>
+            </div>
+            
+            <!-- Question 9 -->
+            <div class="question">
+                <h4>Question 9: What confirmed the truth of the legend?</h4>
+                <label><input type="radio" name="q9" value="the discovery of hieroglyphics"> the discovery of hieroglyphics</label><br>
+                <label><input type="radio" name="q9" value="the uncovering of the hidden chamber"> the uncovering of the hidden chamber</label><br>
+                <label><input type="radio" name="q9" value="the vast treasure trove"> the vast treasure tro
+                    ve</label><br>
+                </div>
+    
+                <!-- Question 10 -->
+                <div class="question">
+                    <h4>Question 10: How did they navigate through the jungle?</h4>
+                    <label><input type="radio" name="q10" value="using a compass"> using a compass</label><br>
+                    <label><input type="radio" name="q10" value="following the stars"> following the stars</label><br>
+                    <label><input type="radio" name="q10" value="using a map"> using a map</label><br>
+                </div>
+                <!-- Submit Button -->
+                <input type="submit" value="Submit Quiz">
+            </form>
+        </div>
+        <script>
+            document.getElementById('quiz-form').onsubmit = function(event) {
+                event.preventDefault(); // Prevent form submission to server
+        
+                let score = 0;
+                const totalQuestions = 10; // Total number of questions
+                const correctAnswers = ["Dr. Emily Carter", "a lost city", "both wild animals and treacherous terrain", "a hidden chamber", "the location of the treasure", "at the heart of the city", "a vast treasure trove", "excited", "the vast treasure trove", "using a map"]; // Correct answers in order
+        
+                for (let i = 1; i <= totalQuestions; i++) {
+                    const question = document.querySelector(`input[name="q${i}"]:checked`);
+                    if (question && question.value === correctAnswers[i - 1]) {
+                        score++;
+                    }
+                }
+        
+                const scorePercent = (score / totalQuestions) * 100;
+                
+                if (scorePercent >= 80) {
+                    alert('Congratulations! You have passed this level.');
+        
+                    // Replace '3' with the next level number
+                    const nextLevel = parseInt('2') + 1; // Current level is 2, so next level is 3
+                    const nextLevelButton = document.createElement('button');
+                    nextLevelButton.innerText = `Proceed to Level ${nextLevel}`;
+                    nextLevelButton.onclick = function() {
+                        window.location.href = `level${nextLevel}.html`; // Redirect to the next level quiz page
+                    };
+                    document.body.appendChild(nextLevelButton);
+                } else if (scorePercent < 50) {
+                    alert(`Your score is: ${scorePercent}%.\nBased on these results, we recommend trying a lower reading level.`);
+                } else {
+                    alert(`Your score is: ${scorePercent}%.\nBased on these results, we conclude that this current reading level (Level 3: Middle School) aligns with your reading abilities.`);
+                }
+            };
+        </script>
+        
+    </html>
+    

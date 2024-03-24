@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Comprehension Quiz - HoosReading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="tab">Home</a>
+        <a href="about.html" class="tab">About Us</a>
+        <a href="quiz.html" class="tab">Quiz</a>
+    </nav>
+
+    <div id="quiz-container">
+        <h2>Level 2: Upper Elementary</h2>
+        <h3>The Mysterious Island</h3>
+        <p>One day, while exploring the beach, Jack stumbled upon an old map buried in the sand. The map was weathered and torn, but Jack could make out the faint outline of an island and strange markings that seemed to indicate hidden treasure. Excited by the discovery, Jack recruited his friends, Sarah and Alex, to join him on an adventure to find the treasure.</p>
+        <p>After weeks of planning and gathering supplies, the trio set sail in Jack's small boat. Guided by the map, they navigated through rough seas and stormy weather until finally, they spotted the island on the horizon. As they approached the shore, a sense of excitement and anticipation filled the air.</p>
+        <p>Once ashore, they followed the map's clues, overcoming obstacles and solving riddles along the way. Finally, they reached the spot marked "X" on the map and began digging. To their amazement, they uncovered a chest filled with gold coins and precious jewels. Their adventure had paid off, and they returned home as heroes.</p>
+
+        <!-- Questions -->
+        <form id="quiz-form">
+            <!-- Question 1 -->
+            <div class="question">
+                <h4>Question 1: Jack found the map while ________.</h4>
+                <label><input type="radio" name="q1" value="exploring the forest"> exploring the forest</label><br>
+                <label><input type="radio" name="q1" value="playing in the park"> playing in the park</label><br>
+                <label><input type="radio" name="q1" value="exploring the beach"> exploring the beach</label><br>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="question">
+                <h4>Question 2: Who joined Jack on the adventure?</h4>
+                <label><input type="radio" name="q2" value="Sarah"> Sarah</label><br>
+                <label><input type="radio" name="q2" value="Alex"> Alex</label><br>
+                <label><input type="radio" name="q2" value="both Sarah and Alex"> both Sarah and Alex</label><br>
+            </div>
+            
+            <!-- Question 3 -->
+            <div class="question">
+                <h4>Question 3: How did the trio travel to the island?</h4>
+                <label><input type="radio" name="q3" value="by plane"> by plane</label><br>
+                <label><input type="radio" name="q3" value="by car"> by car</label><br>
+                <label><input type="radio" name="q3" value="by boat"> by boat</label><br>
+            </div>
+            
+            <!-- Question 4 -->
+            <div class="question">
+                <h4>Question 4: What did they find buried on the island?</h4>
+                <label><input type="radio" name="q4" value="a chest filled with gold coins and precious jewels"> a chest filled with gold coins and precious jewels</label><br>
+                <label><input type="radio" name="q4" value="a buried shipwreck"> a buried shipwreck</label><br>
+                <label><input type="radio" name="q4" value="a hidden cave"> a hidden cave</label><br>
+            </div>
+             <!-- Question 5 -->
+            <div class="question">
+                <h4>Question 5: How did they feel when they finally found the treasure?</h4>
+                <label><input type="radio" name="q5" value="disappointed"> disappointed</label><br>
+                <label><input type="radio" name="q5" value="relieved"> relieved</label><br>
+                <label><input type="radio" name="q5" value="excited"> excited</label><br>
+            </div>
+            
+            <!-- Question 6 -->
+            <div class="question">
+                <h4>Question 6: What obstacles did they face on their journey?</h4>
+                <label><input type="radio" name="q6" value="friendly animals"> friendly animals</label><br>
+                <label><input type="radio" name="q6" value="riddles and clues"> riddles and clues</label><br>
+                <label><input type="radio" name="q6" value="smooth sailing"> smooth sailing</label><br>
+            </div>
+            
+            <!-- Question 7 -->
+            <div class="question">
+                <h4>Question 7: How did they return home?</h4>
+                <label><input type="radio" name="q7" value="by swimming"> by swimming</label><br>
+                <label><input type="radio" name="q7" value="by flying"> by flying</label><br>
+                <label><input type="radio" name="q7" value="by sailing"> by sailing</label><br>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <h4>Question 8: What was the weather like when they sailed to the island?</h4>
+                <label><input type="radio" name="q8" value="sunny"> sunny</label><br>
+                <label><input type="radio" name="q8" value="stormy"> stormy</label><br>
+                <label><input type="radio" name="q8" value="cloudy"> cloudy</label><br>
+            </div>
+            
+            <!-- Question 9 -->
+            <div class="question">
+                <h4>Question 9: Who spotted the island first?</h4>
+                <label><input type="radio" name="q9" value="Jack"> Jack</label><br>
+                <label><input type="radio" name="q9" value="Sarah"> Sarah</label><br>
+                <label><input type="radio" name="q9" value="Alex"> Alex</label><br>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question"></div>
+                <h4>Question 10: How did they know they were in the right place to dig?</h4>
+                <label><input type="radio" name="q10" value="the map told them"> the map told them</label><br>
+                <label><input type="radio" name="q10" value="they saw an X on the ground"> they saw an X on the ground</label><br>
+                <label><input type="radio" name="q10" value="they found a hidden cave"> they found a hidden cave</label><br>
+            </div>
+            <!-- Submit Button -->
+            <input type="submit" value="Submit Quiz">
+        </form>
+    </div>
+    <script>
+        document.getElementById('quiz-form').onsubmit = function(event) {
+            event.preventDefault(); // Prevent form submission to server
+    
+            let score = 0;
+            const totalQuestions = 10; // Total number of questions
+            const correctAnswers = ["exploring the beach", "both Sarah and Alex", "by boat", "a chest filled with gold coins and precious jewels", "excited", "riddles and clues", "by sailing", "stormy", "Jack", "the map told them"]; // Correct answers in order
+    
+            for (let i = 1; i <= totalQuestions; i++) {
+                const question = document.querySelector(`input[name="q${i}"]:checked`);
+                if (question && question.value === correctAnswers[i - 1]) {
+                    score++;
+                }
+            }
+    
+            const scorePercent = (score / totalQuestions) * 100;
+            
+            if (scorePercent >= 80) {
+                alert('Congratulations! You have passed this level.');
+    
+                // Replace '2' with the next level number
+                const nextLevel = parseInt('1') + 1; // Current level is 1, so next level is 2
+                const nextLevelButton = document.createElement('button');
+                nextLevelButton.innerText = `Proceed to Level ${nextLevel}`;
+                nextLevelButton.onclick = function() {
+                    window.location.href = `level${nextLevel}.html`; // Redirect to the next level quiz page
+                };
+                document.body.appendChild(nextLevelButton);
+            } else if (scorePercent < 50) {
+                alert(`Your score is: ${scorePercent}%.\nBased on these results, we recommend trying a lower reading level.`);
+            } else {
+                alert(`Your score is: ${scorePercent}%.\nBased on these results, we conclude that this current reading level (Level 2: Upper Elementary) aligns with your reading abilities.`);
+            }
+        };
+    </script>
+    
+</html>
