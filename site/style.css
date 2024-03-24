@@ -1,64 +1,68 @@
-/* Apply a background image to the whole page */
-html {
-    height: 100%;
-    background-image: url('background.webp'); /* Ensure the path to your image is correct */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  body {
-    margin: 0;
-    /* Use display flex to center the child vertically and horizontally */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 2rem; /* Add some padding around the content */
-  }
-  
-  /* Navbar styling */
-  .navbar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    /* Rest of your navbar styling */
-  }
-  
-  /* Container for quiz content */
-  #quiz-container {
-    width: auto; /* Takes the width of the content */
-    max-width: 800px; /* Adjust as needed */
-    margin: auto; /* Centers the container */
-    padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    text-align: left; /* Aligns text to the left inside the container */
-  }
-  
-  /* Center the headings */
-  h1, h2 {
-    color: black;
-    font-size: 2.5rem; /* Adjusted for better scalability */
-    margin: 0 0 1rem 0; /* Top and bottom margins */
-  }
-  
-  /* Style the button */
-  .button {
+/* Style the navigation bar */
+.navbar {
+    background-color: #eabd8f; /* Adjusted the color to match your provided images */
+    padding: 30px 0;
+    text-align: center;
+    font-size: 25px;
+}
+.quiz-header {
+    font-size: 1.5em; /* Increase font-size as needed */
+    margin-top: 200; /* Adjust top margin to move it up */
+    text-align: center; /* Ensure it is centered */
+    background-image: url('background.jpeg'); /* Replace with your background image path */
+    text-align: center;
+    padding: 500px 200px;
+    color: rgb(10, 10, 0); /* Assuming you want white text over a dark image */
+}
+
+.level-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+    gap: 20px; /* Adds space between the grid items */
+    padding: 20px;
+    text-align: center;
+}
+
+.level {
+    padding: 30px;
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth scaling transition */
+}
+
+.level:hover {
+    transform: scale(1.05); /* Scales up the level block slightly on hover */
+}
+
+.level h2 {
+    margin: 0 0 20px 0; /* Adjust spacing around the heading */
+    color: white;
+}
+
+.level-link {
     display: inline-block;
-    padding: 10px 20px; /* Adjusted padding for a more standard button size */
-    background-color: #D95030; /* Orange color */
+    padding: 10px 20px;
+    background-color: #f4be8b; /* Your orange color */
     color: white;
     text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  /* Styles for quiz content */
-  .comprehension-paragraph, .quiz-questions {
-    margin-bottom: 20px; /* Space between paragraphs/questions */
-  }
-  
+    border-radius: 5px; /* Rounded corners for the link/button */
+}
+
+/* Style the footer */
+.footer-container {
+    background-color: #eabd8f; /* A darker shade of green for the footer */
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* No longer absolute to be part of the document flow */
+    bottom: 0;
+    width: 100%;
+    min-height: 150px; /* Adjust as needed */
+
+}
+
+.footer-logo {
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    bottom: 20px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
+}
