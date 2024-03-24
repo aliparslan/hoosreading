@@ -4,12 +4,16 @@
     "version": "1.0",
     "description": "A browser extension to adapt online text into easier reading levels for younger readers and non-native English speakers.",
     "permissions": [
+        "tabs",
         "activeTab",
         "scripting"
     ],
     "action": {
         "default_popup": "popup.html",
         "default_icon": "images/logo.png"
+    },
+    "background": {
+        "service_worker": "background.js"
     },
     "content_scripts": [
         {
