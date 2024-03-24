@@ -153,40 +153,6 @@ function submitQuiz() {
     }
 }
 
-
-function submitQuiz() {
-    var correctAnswersCount = 0;
-    var level = getLevelFromURL();
-    var comprehensionLevelData = comprehensionData.find(data => data.level === level);
-
-    comprehensionLevelData.questions.forEach(function(questionObj, index) {
-        var selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
-        if (selectedOption && selectedOption.value === questionObj.answer) {
-            correctAnswersCount++;
-        }
-    });
-
-    var score = (correctAnswersCount / comprehensionLevelData.questions.length) * 100;
-    alert(`Your score is ${score}%`);
-
-    if (score >= 80) {
-        alert('Congratulations! You have passed this level.');
-        if (level < 5) {
-            var nextLevel = parseInt(level) + 1;
-            var nextLevelButton = document.createElement('button');
-            nextLevelButton.innerText = `Proceed to Level ${nextLevel}`;
-            nextLevelButton.addEventListener('click', function() {
-                window.location.href = `quiz.html?level=${nextLevel}`;
-            });
-            quizContainer.appendChild(nextLevelButton);
-        } else {
-            alert('You have reached the highest level available.');
-        }
-    } else {
-        alert(`You scored below an 80. Based on these results, we conclude that this current reading level (${comprehensionLevelData.title}) aligns with your reading abilities.`);
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     const level = getLevelFromURL(); // Get the level from the URL
     displayComprehensionForLevel(level); // Display the correct quiz based on the level
