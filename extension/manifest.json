@@ -1,14 +1,25 @@
 {
-    "manifest_version": 3, 
+    "manifest_version": 3,
     "name": "HoosReading Extension",
-    "version": "1.0", 
-    "description": "A browser extension to adapt online text into easier reading levels for non-native English speakers and individuals with dyslexia.", 
+    "version": "1.0",
+    "description": "A browser extension to adapt online text into easier reading levels for younger readers and non-native English speakers.",
     "permissions": [
         "activeTab",
-        "storage"
+        "scripting"
     ],
     "action": {
         "default_popup": "popup.html",
-        "default_icon": "hoosreadinglogo.png"
-    }
+        "default_icon": "images/logo.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
 }

@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <title>HoosReading Settings</title>
     <link rel="stylesheet" href="popup.css">
-    <script src="script.js"></script>
-
 </head>
 
 <body>
-    <h1>HoosReading</h1>
-    <p>Select your preffered reading level:</p>
+    <h1>Hoo's Reading?</h1>
+    <p>Select your preferred reading level:</p>
     <select id="reading-level">
-        <option value="A1">A1</option>
-        <option value="A2">A2</option>
-        <option value="B1">B1</option>
-        <option value="B1+">B1+</option>
-        <option value="B2">B2</option>
+        <option class="toggle">A1</option>
+        <option class="toggle">A2</option>
+        <option class="toggle">B1</option>
+        <option class="toggle">B1+</option>
+        <option class="toggle">B2</option>
+        <option class="toggle">Non-Technical</option>
     </select>
+    <button id="revert">Revert Changes</button>
     <button id="save">Save Settings</button>
-    <script scr="popup.js"></script>
+    <script src="popup.js"></script>
 </body>
 
 </html>
