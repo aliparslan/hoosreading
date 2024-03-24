@@ -1,0 +1,48 @@
+/* Set background image */
+.background-container {
+    background-image: url('background1.webp'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 400px 0; /* Add padding as needed */
+}
+
+/* Center the headings */
+h1, h2 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    z-index: 1;
+}
+
+/* Style the button */
+.button {
+    display: inline-block;
+    padding: 50px 100px;
+    background-color: #D95030; /* Orange color */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Style the orange navigational bar */
+.navbar {
+    background-color: #D95030; /* Orange color */
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Style the tabs */
+.tab {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 20px;
+}
