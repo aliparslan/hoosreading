@@ -1,3 +1,7 @@
+require('dotenv').config();
+const apiKey = process.env.OPENAI_API_KEY;
+console.log(apiKey);
+
 // mapping user's choice to their level of reading
 const mappings = {
     "A1": "lower elementary school student",
@@ -28,8 +32,6 @@ async function callOpenAI(content) {
     // console.log("mapping: " + mappings[query]);
     // console.log("Original content being processed: " + content);
 
-    // Replace this with your actual OpenAI API key
-    const apiKey = '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';
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
         headers: {
