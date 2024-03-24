@@ -1,30 +1,68 @@
-/* Set background image */
-.background-container {
-    background-image: url('background.webp'); /* Path to your background image */
-    background-size: cover;
-    background-position: center;
+/* Style the navigation bar */
+.navbar {
+    background-color: #eabd8f; /* Adjusted the color to match your provided images */
+    padding: 30px 0;
     text-align: center;
-    padding: 400px 0; /* Add padding as needed */
+    font-size: 25px;
+}
+.quiz-header {
+    font-size: 1.5em; /* Increase font-size as needed */
+    margin-top: 200; /* Adjust top margin to move it up */
+    text-align: center; /* Ensure it is centered */
+    background-image: url('background.jpeg'); /* Replace with your background image path */
+    text-align: center;
+    padding: 500px 200px;
+    color: rgb(10, 10, 0); /* Assuming you want white text over a dark image */
 }
 
-/* Center the headings */
-h1, h2 {
-    position: relative;
+.level-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+    gap: 20px; /* Adds space between the grid items */
+    padding: 20px;
     text-align: center;
+}
+
+.level {
+    padding: 30px;
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s; /* Smooth scaling transition */
+}
+
+.level:hover {
+    transform: scale(1.05); /* Scales up the level block slightly on hover */
+}
+
+.level h2 {
+    margin: 0 0 20px 0; /* Adjust spacing around the heading */
     color: white;
-    font-size: 60px;
-    z-index: 1;
 }
 
-/* Style the button */
-.button {
+.level-link {
     display: inline-block;
-    padding: 50px 100px;
-    background-color: #D95030; /* Orange color */
+    padding: 10px 20px;
+    background-color: #f4be8b; /* Your orange color */
     color: white;
     text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
+    border-radius: 5px; /* Rounded corners for the link/button */
+}
+
+/* Style the footer */
+.footer-container {
+    background-color: #eabd8f; /* A darker shade of green for the footer */
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* No longer absolute to be part of the document flow */
+    bottom: 0;
+    width: 100%;
+    min-height: 150px; /* Adjust as needed */
+
+}
+
+.footer-logo {
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    bottom: 20px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
 }
