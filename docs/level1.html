@@ -17,81 +17,91 @@
         <h2>Level 1: Lower Elementary</h2>
         <h3>Memories of my first day at school</h3>
         <p>I remember my first day at school very well. I knew the school quite well because my older sister, Sandy, went there and every day, dad and I met her at the school gate after school. Every day, she ran out of the school with her friends. She often carried a painting. I felt jealous. I wanted to paint too!</p>
-        <!-- Repeat for all paragraphs in your data -->
+        <p>I was five years old when I started school. Most children in my class started school in September, but I started school in January, when I was five years old, because my birthday is in December. Three other kids started school on the same day as me. I was excited about my first day. I had my new uniform: a black skirt, a white t-shirt and green jumper, and a new red bag. When we arrived that day, a teacher met the new children at the school gate. Dad hugged me and said goodbye. I stood with the other children. I didn’t talk to them because I was too nervous. Then, Mrs Wilson took us to our classroom. All the other children were already there. They looked at us when we entered the room. When thirty children looked at me, I started to cry!</p>
+        <p>But I wasn’t upset for long. I sat with the other children on the carpet and the class teacher, Miss Holland, read us a story. Later, we drew pictures with coloured pencils, and at break time, I made friends with a girl called Megan. At the end of the day, I ran to the school gate with Megan and my picture, just like Sandy always did.</p>
 
         <!-- Questions -->
         <form id="quiz-form">
             <!-- Question 1 -->
             <div class="question">
-                <p>The writer was jealous of Sandy because she _____ at school.</p>
+                <p>Question 1: The writer was jealous of Sandy because she _____ at school.</p>
                 <label><input type="radio" name="q1" value="learned to write"> learned to write</label><br>
                 <label><input type="radio" name="q1" value="painted pictures"> painted pictures</label><br>
                 <label><input type="radio" name="q1" value="had many friends"> had many friends</label><br>
             </div>
             
             <div class="question">
-                <p>The writer started school in ___.</p>
+                <p>Question 2: The writer started school in ___.</p>
                 <label><input type="radio" name="q2" value="September"> September</label><br>
                 <label><input type="radio" name="q2" value="December"> December</label><br>
                 <label><input type="radio" name="q2" value="January"> January</label><br>
             </div>
             
             <div class="question">
-                <p>The writer and ___ other children started school that day.</p>
+                <p>Question 3: The writer and ___ other children started school that day.</p>
                 <label><input type="radio" name="q3" value="three"> three</label><br>
                 <label><input type="radio" name="q3" value="five"> five</label><br>
                 <label><input type="radio" name="q3" value="ten"> ten</label><br>
             </div>
             
             <div class="question">
-                <p>Before the writer started school, she felt ___.</p>
+                <p>Question 4: Before the writer started school, she felt ___.</p>
                 <label><input type="radio" name="q4" value="excited"> excited</label><br>
                 <label><input type="radio" name="q4" value="nervous"> nervous</label><br>
                 <label><input type="radio" name="q4" value="upset"> upset</label><br>
             </div>
             
             <div class="question">
-                <p>The writer started to cry when ___.</p>
+                <p>QUestion 5: The writer started to cry when ___.</p>
                 <label><input type="radio" name="q5" value="she entered the school"> she entered the school</label><br>
                 <label><input type="radio" name="q5" value="other children looked at her"> other children looked at her</label><br>
                 <label><input type="radio" name="q5" value="her father left"> her father left</label><br>
             </div>
             
             <div class="question">
-                <p>On the first day, the writer ___.</p>
+                <p>Question 6: On the first day, the writer ___.</p>
                 <label><input type="radio" name="q6" value="painted a picture"> painted a picture</label><br>
                 <label><input type="radio" name="q6" value="learned to write"> learned to write</label><br>
                 <label><input type="radio" name="q6" value="listened to a story"> listened to a story</label><br>
             </div>
-            
-            
+    
 
             <!-- Submit Button -->
             <input type="submit" value="Submit Quiz">
         </form>
     </div>
-
     <script>
         document.getElementById('quiz-form').onsubmit = function(event) {
             event.preventDefault(); // Prevent form submission to server
-
-            // Logic to check answers
+    
             let score = 0;
             const totalQuestions = 6; // Total number of questions
             const correctAnswers = ["painted pictures", "January", "three", "excited", "other children looked at her", "listened to a story"]; // Correct answers in order
-
+    
             for (let i = 1; i <= totalQuestions; i++) {
                 const question = document.querySelector(`input[name="q${i}"]:checked`);
                 if (question && question.value === correctAnswers[i - 1]) {
                     score++;
                 }
             }
-
+    
             const scorePercent = (score / totalQuestions) * 100;
-            alert("Your score is: " + scorePercent + "%");
-
-            // You can also add logic to navigate to the next level or retry based on the score
+            
+            if (scorePercent >= 80) {
+                alert('Congratulations! You have passed this level.');
+    
+                // Replace '2' with the next level number
+                const nextLevel = parseInt('1') + 1; // Current level is 1, so next level is 2
+                const nextLevelButton = document.createElement('button');
+                nextLevelButton.innerText = `Proceed to Level ${nextLevel}`;
+                nextLevelButton.onclick = function() {
+                    window.location.href = `level${nextLevel}.html`; // Redirect to the next level quiz page
+                };
+                document.body.appendChild(nextLevelButton);
+            } else {
+                alert(`Your score is: ${scorePercent}%.\nBased on these results, we conclude that this current reading level (Level 1: Lower Elementary) aligns with your reading abilities.`);
+            }
         };
     </script>
-</body>
+    
 </html>
