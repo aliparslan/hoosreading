@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Comprehension Quiz - HoosReading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="tab">Home</a>
+        <a href="about.html" class="tab">About Us</a>
+        <a href="quiz.html" class="tab">Quiz</a>
+    </nav>
+
+    <div id="quiz-container">
+        <h2>Level 1: Lower Elementary</h2>
+        <h3>Memories of my first day at school</h3>
+        <p>I remember my first day at school very well. I knew the school quite well because my older sister, Sandy, went there and every day, dad and I met her at the school gate after school. Every day, she ran out of the school with her friends. She often carried a painting. I felt jealous. I wanted to paint too!</p>
+        <!-- Repeat for all paragraphs in your data -->
+
+        <!-- Questions -->
+        <form id="quiz-form">
+            <!-- Question 1 -->
+            <div class="question">
+                <p>The writer was jealous of Sandy because she _____ at school.</p>
+                <label><input type="radio" name="q1" value="learned to write"> learned to write</label><br>
+                <label><input type="radio" name="q1" value="painted pictures"> painted pictures</label><br>
+                <label><input type="radio" name="q1" value="had many friends"> had many friends</label><br>
+            </div>
+            
+            <div class="question">
+                <p>The writer started school in ___.</p>
+                <label><input type="radio" name="q2" value="September"> September</label><br>
+                <label><input type="radio" name="q2" value="December"> December</label><br>
+                <label><input type="radio" name="q2" value="January"> January</label><br>
+            </div>
+            
+            <div class="question">
+                <p>The writer and ___ other children started school that day.</p>
+                <label><input type="radio" name="q3" value="three"> three</label><br>
+                <label><input type="radio" name="q3" value="five"> five</label><br>
+                <label><input type="radio" name="q3" value="ten"> ten</label><br>
+            </div>
+            
+            <div class="question">
+                <p>Before the writer started school, she felt ___.</p>
+                <label><input type="radio" name="q4" value="excited"> excited</label><br>
+                <label><input type="radio" name="q4" value="nervous"> nervous</label><br>
+                <label><input type="radio" name="q4" value="upset"> upset</label><br>
+            </div>
+            
+            <div class="question">
+                <p>The writer started to cry when ___.</p>
+                <label><input type="radio" name="q5" value="she entered the school"> she entered the school</label><br>
+                <label><input type="radio" name="q5" value="other children looked at her"> other children looked at her</label><br>
+                <label><input type="radio" name="q5" value="her father left"> her father left</label><br>
+            </div>
+            
+            <div class="question">
+                <p>On the first day, the writer ___.</p>
+                <label><input type="radio" name="q6" value="painted a picture"> painted a picture</label><br>
+                <label><input type="radio" name="q6" value="learned to write"> learned to write</label><br>
+                <label><input type="radio" name="q6" value="listened to a story"> listened to a story</label><br>
+            </div>
+            
+            
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit Quiz">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('quiz-form').onsubmit = function(event) {
+            event.preventDefault(); // Prevent form submission to server
+
+            // Logic to check answers
+            let score = 0;
+            const totalQuestions = 6; // Total number of questions
+            const correctAnswers = ["painted pictures", "January", "three", "excited", "other children looked at her", "listened to a story"]; // Correct answers in order
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const question = document.querySelector(`input[name="q${i}"]:checked`);
+                if (question && question.value === correctAnswers[i - 1]) {
+                    score++;
+                }
+            }
+
+            const scorePercent = (score / totalQuestions) * 100;
+            alert("Your score is: " + scorePercent + "%");
+
+            // You can also add logic to navigate to the next level or retry based on the score
+        };
+    </script>
+</body>
+</html>
