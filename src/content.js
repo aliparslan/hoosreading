@@ -1,3 +1,7 @@
+require('dotenv').config();
+const apiKey = process.env.OPENAI_API_KEY;
+console.log(apiKey);
+
 // mapping user's choice to their level of reading
 const mappings = {
     "A1": "lower elementary school student",
@@ -24,12 +28,10 @@ chrome.runtime.onMessage.addListener(async function (request, sender, sendRespon
 
 async function callOpenAI(content) {
     // Log actions for debugging
-    console.log("Button clicked, level: " + query);
+    // console.log("Button clicked, level: " + query);
     // console.log("mapping: " + mappings[query]);
-    console.log("Original content being processed: " + content);
+    // console.log("Original content being processed: " + content);
 
-    // Replace this with your actual OpenAI API key
-    const apiKey = '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';
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
         headers: {
@@ -52,7 +54,7 @@ async function callOpenAI(content) {
     });
 
     const data = await response.json();
-    return data.choices[0].message.content; // Return the modified text from OpenAI
+    return data.choices[0].message.content; // Return the modified text
 }
 
 // Function to modify text nodes
@@ -65,7 +67,7 @@ async function modifyTextNodes(element) {
         if (trimmedText && !element.originalText && trimmedText.length > 15) { // Store original text
             element.originalText = element.textContent;
             // element.textContent = '[Translated] ' + element.textContent;
-            element.textContent = await callOpenAI(trimmedText); // Call OpenAI API
+            element.textContent = await callOpenAI(trimmedText); // call api
         }
     } else if (element.nodeType === 1) {
         element.childNodes.forEach(modifyTextNodes);
